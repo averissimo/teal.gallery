@@ -3,10 +3,37 @@
     "Version": "4.3.1",
     "Repositories": [
       {
+        "Name": "BioCsoft",
+        "URL": "https://bioconductor.org/packages/3.17/bioc"
+      },
+      {
+        "Name": "BioCann",
+        "URL": "https://bioconductor.org/packages/3.17/data/annotation"
+      },
+      {
+        "Name": "BioCexp",
+        "URL": "https://bioconductor.org/packages/3.17/data/experiment"
+      },
+      {
+        "Name": "BioCworkflows",
+        "URL": "https://bioconductor.org/packages/3.17/workflows"
+      },
+      {
+        "Name": "BioCbooks",
+        "URL": "https://bioconductor.org/packages/3.17/books"
+      },
+      {
         "Name": "CRAN",
         "URL": "https://cloud.r-project.org"
+      },
+      {
+        "Name": "r_universe",
+        "URL": "https://insightsengineering.r-universe.dev"
       }
     ]
+  },
+  "Bioconductor": {
+    "Version": "3.17"
   },
   "Packages": {
     "BH": {
@@ -15,6 +42,25 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "68122010f01c4dcfbe58ce7112f2433d"
+    },
+    "BiocManager": {
+      "Package": "BiocManager",
+      "Version": "1.30.22",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "utils"
+      ],
+      "Hash": "d57e43105a1aa9cb54fdb4629725acb1"
+    },
+    "BiocVersion": {
+      "Package": "BiocVersion",
+      "Version": "3.17.1",
+      "Source": "Bioconductor",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "f7c0d5521799b7b0d0a211143ed0bfcb"
     },
     "DT": {
       "Package": "DT",
@@ -929,9 +975,9 @@
     },
     "formatters": {
       "Package": "formatters",
-      "Version": "0.5.0",
+      "Version": "0.5.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
@@ -939,7 +985,7 @@
         "htmltools",
         "methods"
       ],
-      "Hash": "e47a27b6a061b04e4ebb6fef8d3a146c"
+      "Hash": "66e3699796095d886233708c59bd10ea"
     },
     "fs": {
       "Package": "fs",
@@ -1202,8 +1248,8 @@
       "Package": "goshawk",
       "Version": "0.1.14",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2021@*release, insightsengineering/scda@*release",
       "RemoteType": "github",
+      "Remotes": "insightsengineering/scda.2021@*release, insightsengineering/scda@*release",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "goshawk",
       "RemoteUsername": "insightsengineering",
@@ -1650,7 +1696,7 @@
     "mmrm": {
       "Package": "mmrm",
       "Version": "0.2.2",
-      "Source": "Repository",
+      "Source": "Bioconductor",
       "Repository": "CRAN",
       "Requirements": [
         "R",
@@ -2093,13 +2139,13 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.17.3",
+      "Version": "1.0.2",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Requirements": [
         "utils"
       ],
-      "Hash": "4543b8cd233ae25c6aba8548be9e747e"
+      "Hash": "4b22ac016fe54028b88d0c68badbd061"
     },
     "rlang": {
       "Package": "rlang",
@@ -2179,9 +2225,9 @@
     },
     "rtables": {
       "Package": "rtables",
-      "Version": "0.6.1",
+      "Version": "0.6.3",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "formatters",
@@ -2191,7 +2237,7 @@
         "methods",
         "stats"
       ],
-      "Hash": "2d59297257faab6d2be17b8c55752f08"
+      "Hash": "d37b19df68a909d2c72696c6eee22a53"
     },
     "sass": {
       "Package": "sass",
@@ -2228,34 +2274,28 @@
     "scda": {
       "Package": "scda",
       "Version": "0.1.6",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "scda",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.1.6",
-      "RemoteSha": "665d4540a8f3c9e8d9271c33b5dd70296b49636c",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "utils"
       ],
-      "Hash": "050ae235c739506fb50990d8e03518bb"
+      "Hash": "bf70e1415684b9ec33d661672a111657"
     },
     "scda.2022": {
       "Package": "scda.2022",
-      "Version": "0.1.4",
+      "Version": "0.1.5",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "scda.2022",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.1.4",
-      "RemoteSha": "ff707b9562629f9e1e70120c0044a76d2eb3ce91",
+      "RemoteRepo": "scda.2022",
+      "RemoteRef": "v0.1.5",
+      "RemoteSha": "5b08051312fababe15476f21323d17bcbb0543cf",
       "Requirements": [
         "R"
       ],
-      "Hash": "5999c8a4cc86b14d741de73ea819cbcb"
+      "Hash": "0e04543b6e8a5f658699c9cdc50534c8"
     },
     "shape": {
       "Package": "shape",
@@ -2337,6 +2377,20 @@
         "shiny"
       ],
       "Hash": "fd889b32caa37b8ed9b1e9e7ef1564bc"
+    },
+    "shinycssloaders": {
+      "Package": "shinycssloaders",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "digest",
+        "glue",
+        "grDevices",
+        "shiny"
+      ],
+      "Hash": "f39bb3c44a9b496723ec7e86f9a771d8"
     },
     "shinyjs": {
       "Package": "shinyjs",
@@ -2470,28 +2524,19 @@
     },
     "teal": {
       "Package": "teal",
-      "Version": "0.13.0",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.13.0",
-      "RemoteSha": "9b5498d6a776b54c731f36f2b95eee5cbc346755",
+      "Version": "0.14.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
         "lifecycle",
         "logger",
         "magrittr",
-        "methods",
         "rlang",
         "shiny",
         "shinyjs",
         "stats",
-        "styler",
-        "teal.code",
         "teal.data",
         "teal.logger",
         "teal.reporter",
@@ -2500,50 +2545,35 @@
         "teal.widgets",
         "utils"
       ],
-      "Hash": "b745f79aff7848311a1ad77e5db2ee02"
+      "Hash": "404f9b53d5212ae28e4911d62d3a09d8"
     },
     "teal.code": {
       "Package": "teal.code",
-      "Version": "0.3.0",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/teal.widgets@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.code",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "667a463bd45b57ea77460c065c9f9e6aa930619b",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
-        "R6",
         "checkmate",
-        "crayon",
+        "grDevices",
         "lifecycle",
         "methods",
         "rlang",
         "shiny",
-        "styler",
-        "teal.widgets"
+        "styler"
       ],
-      "Hash": "6607506fb4eac8919dbc47f81ebd5851"
+      "Hash": "05bbdc13cf5440c53e94bf0f70b41c6b"
     },
     "teal.data": {
       "Package": "teal.data",
-      "Version": "0.2.0",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.logger@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.data",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.2.0",
-      "RemoteSha": "d34454c4dbbcd594a7845d63fbb4b4163d687df4",
+      "Version": "0.3.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "R6",
         "checkmate",
         "digest",
-        "formatters",
         "lifecycle",
         "logger",
         "methods",
@@ -2555,14 +2585,14 @@
         "utils",
         "yaml"
       ],
-      "Hash": "921fe1bc3dff3e8f899663fd7a1f1add"
+      "Hash": "2f1e3270eb58d01f53b52b0f56625a25"
     },
     "teal.goshawk": {
       "Package": "teal.goshawk",
       "Version": "0.1.14",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2021@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern@*release, insightsengineering/goshawk@*release",
       "RemoteType": "github",
+      "Remotes": "insightsengineering/scda.2021@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern@*release, insightsengineering/goshawk@*release",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "teal.goshawk",
       "RemoteUsername": "insightsengineering",
@@ -2595,14 +2625,9 @@
     },
     "teal.logger": {
       "Package": "teal.logger",
-      "Version": "0.1.1",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.logger",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.1.1",
-      "RemoteSha": "2adf290cb04f06c113e9c5ea8506b0b63d5e68f5",
+      "Version": "0.1.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "glue",
@@ -2611,19 +2636,13 @@
         "shiny",
         "withr"
       ],
-      "Hash": "f81a2d2efd48331d5fb58754582139d9"
+      "Hash": "7fcc2929a04dc755d0683f93716f534b"
     },
     "teal.modules.clinical": {
       "Package": "teal.modules.clinical",
-      "Version": "0.8.15",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern.gee@*release, insightsengineering/tern.mmrm@*release, insightsengineering/tern@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.modules.clinical",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.8.15",
-      "RemoteSha": "583b20f1754d6a886f5815f48bf5a5a22d536698",
+      "Version": "0.8.16",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "DT",
         "R",
@@ -2662,19 +2681,13 @@
         "utils",
         "vistime"
       ],
-      "Hash": "63c463a38c5edcd1ef0b635ab63e4e50"
+      "Hash": "f49d98a842fd491fdc01feac773c62d6"
     },
     "teal.modules.general": {
       "Package": "teal.modules.general",
-      "Version": "0.2.15",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2021@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.reporter@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.transform@*release, insightsengineering/teal.widgets@*release, insightsengineering/teal@*release, insightsengineering/tern@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.modules.general",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.2.15",
-      "RemoteSha": "dc82c3267caa779467f5b11a353fc809f1dce245",
+      "Version": "0.2.16",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "DT",
         "R",
@@ -2691,6 +2704,7 @@
         "shinyTree",
         "shinyWidgets",
         "shinyjs",
+        "shinyvalidate",
         "stats",
         "stringr",
         "teal",
@@ -2706,23 +2720,19 @@
         "tidyselect",
         "utils"
       ],
-      "Hash": "643c0c804b291c065ed3deee1263c037"
+      "Hash": "70b3f00b57a2a2e6ad69bb32f4c5eaa2"
     },
     "teal.reporter": {
       "Package": "teal.reporter",
-      "Version": "0.1.1",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.reporter",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.1.1",
-      "RemoteSha": "a7c19debf8704afa1a1794dc1a8f6a88091a5e7c",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R6",
         "bslib",
         "checkmate",
         "grid",
+        "htmltools",
         "knitr",
         "lifecycle",
         "rmarkdown",
@@ -2731,55 +2741,45 @@
         "yaml",
         "zip"
       ],
-      "Hash": "a693c93b4eb850645bcc777d6da91531"
+      "Hash": "57479129ef12c4a3bcaa47cf97cbeef1"
     },
     "teal.slice": {
       "Package": "teal.slice",
-      "Version": "0.3.0",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.widgets@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.slice",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "e239912fd21d340680a4334f6ca87c48c8e81fab",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "R6",
+        "bslib",
         "checkmate",
         "dplyr",
-        "ggplot2",
         "grDevices",
+        "htmltools",
+        "jsonlite",
         "lifecycle",
         "logger",
         "methods",
+        "plotly",
         "shiny",
         "shinyWidgets",
+        "shinycssloaders",
         "shinyjs",
-        "stats",
         "teal.data",
         "teal.logger",
         "teal.widgets"
       ],
-      "Hash": "321f06738f011380a71e739a043de007"
+      "Hash": "31bf42079affad82082cf2bd92ed4da2"
     },
     "teal.transform": {
       "Package": "teal.transform",
-      "Version": "0.3.0",
-      "Source": "GitHub",
-      "Remotes": "insightsengineering/scda.2022@*release, insightsengineering/scda@*release, insightsengineering/teal.code@*release, insightsengineering/teal.data@*release, insightsengineering/teal.logger@*release, insightsengineering/teal.slice@*release, insightsengineering/teal.widgets@*release",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.transform",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "3eb5fcd142ea9f85e8807e4b3466de58a5823f20",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "checkmate",
         "dplyr",
-        "formatters",
         "lifecycle",
         "logger",
         "magrittr",
@@ -2789,7 +2789,6 @@
         "shinyjs",
         "shinyvalidate",
         "stats",
-        "teal.code",
         "teal.data",
         "teal.logger",
         "teal.slice",
@@ -2797,18 +2796,13 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "c353422c1a9fba8401d3fdeacee8b749"
+      "Hash": "c7887305e42dd13c94d2df2d14ea8ca6"
     },
     "teal.widgets": {
       "Package": "teal.widgets",
-      "Version": "0.3.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteRepo": "teal.widgets",
-      "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.3.0",
-      "RemoteSha": "fe3bd2fd5a70969157d61b20962175d0045c5fa5",
+      "Version": "0.4.0",
+      "Source": "Repository",
+      "Repository": "https://insightsengineering.r-universe.dev",
       "Requirements": [
         "R",
         "bslib",
@@ -2823,18 +2817,18 @@
         "shinyjs",
         "styler"
       ],
-      "Hash": "274404e3537fc46d79e881ec44a32e19"
+      "Hash": "00c70d4fe01ef4e2c4dac416021ca1fb"
     },
     "tern": {
       "Package": "tern",
-      "Version": "0.8.4",
+      "Version": "0.9.0",
       "Source": "GitHub",
       "RemoteType": "github",
       "RemoteHost": "api.github.com",
-      "RemoteRepo": "tern",
       "RemoteUsername": "insightsengineering",
-      "RemoteRef": "v0.8.4",
-      "RemoteSha": "2b3189f45453c8bc2ebd0b88bf0aabd8066c30f3",
+      "RemoteRepo": "tern",
+      "RemoteRef": "v0.9.0",
+      "RemoteSha": "95158c91cf607e3effc8e838e8e8ccb5c985dff2",
       "Requirements": [
         "R",
         "Rdpack",
@@ -2863,14 +2857,14 @@
         "tidyr",
         "utils"
       ],
-      "Hash": "bfbffe2cc48582f0ac91a17f45388fe9"
+      "Hash": "86152e20bd031f91dcd9564c4e02e46b"
     },
     "tern.gee": {
       "Package": "tern.gee",
       "Version": "0.1.0",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/tern@*release",
       "RemoteType": "github",
+      "Remotes": "insightsengineering/tern@*release",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "tern.gee",
       "RemoteUsername": "insightsengineering",
@@ -2895,8 +2889,8 @@
       "Package": "tern.mmrm",
       "Version": "0.2.1",
       "Source": "GitHub",
-      "Remotes": "insightsengineering/tern@*release, openpharma/mmrm",
       "RemoteType": "github",
+      "Remotes": "insightsengineering/tern@*release, openpharma/mmrm",
       "RemoteHost": "api.github.com",
       "RemoteRepo": "tern.mmrm",
       "RemoteUsername": "insightsengineering",
